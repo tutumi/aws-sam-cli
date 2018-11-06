@@ -221,6 +221,7 @@ class Container(object):
             if frame_type == Container._STDOUT_FRAME_TYPE and stdout:
                 # Frame type 1 is stdout data.
                 stdout.write(data)
+                break
 
             elif frame_type == Container._STDERR_FRAME_TYPE and stderr:
                 # Frame type 2 is stderr data.
