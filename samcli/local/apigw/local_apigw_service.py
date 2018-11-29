@@ -195,7 +195,7 @@ class LocalApigwService(BaseLocalService):
 
         status_code = json_output.get("statusCode") or 200
         headers = CaseInsensitiveDict(json_output.get("headers") or {})
-        body = json_output.get("body") or "no data"
+        body = json_output.get("body")
         is_base_64_encoded = json_output.get("isBase64Encoded") or False
 
         if not isinstance(status_code, int) or status_code <= 0:
